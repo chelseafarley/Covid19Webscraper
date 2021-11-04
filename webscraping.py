@@ -29,13 +29,13 @@ def respond():
                 "address": address,
                 "exposure_events": []
             }
-        
+
         parsed_locations[name]["exposure_events"].append({
             "day": day,
             "times": times
         })
-    
-    return Response(json.dumps(parsed_locations.values()), mimetype="application/json")
+
+    return Response(json.dumps(list(parsed_locations.values())), mimetype="application/json")
 
 @app.route('/')
 def index():
