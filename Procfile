@@ -1,1 +1,1 @@
-web: gunicorn app:webscraping
+web: gunicorn app:covid19-webscraping
